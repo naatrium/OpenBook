@@ -1,0 +1,194 @@
+*{
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+
+body {
+  background-color: rgba(255, 255, 255, 0.829);
+  color: black;
+  margin: 0 auto;
+ padding-bottom: 15px;
+  padding-left: 0;
+  background-image: linear-gradient(90deg, rgba(78, 170, 236, 0.883), white);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;           
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 100px;
+  background-color: rgb(255, 255, 255);    
+  border-radius: 50px;       
+  border: 3px solid black;  
+}
+header {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+#title{
+  margin: 0;
+}
+#iconbook {
+ margin-right: 20px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+h1, h3{
+  margin: 0;
+}
+h1{
+  margin-top: 30px;
+}
+
+h3{
+  text-align: center;
+  margin-top:10px;
+}
+
+#busca{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+ 
+}
+
+input[type=text]{
+  border-radius: 10px;
+  background-color: white;
+  height: 35px;
+}
+
+.afterh{
+display: flex;
+justify-content: space-between;
+}
+
+button{
+  background-color: white;
+  border-radius: 100px;
+  height: 40px;
+  width: 50px;
+  margin-right: 10px;
+}
+button:hover {
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  
+}
+
+.doislivros{
+  display: flex;
+  justify-content: stretch;
+  float: left;
+
+}
+.txtcapa{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+
+main{
+  display: flex;
+  margin-top: 25px; 
+}
+aside{
+  margin-left: 0;
+}
+li{
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul{
+  padding-left: 25px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+ color: white;
+ font-weight: bold;
+}
+h2{
+  margin-bottom: 0px;
+}
+
+.estrela p{
+  font-size: 20px;
+}
+
+.estrela{
+  display: flex;
+  align-items: center;
+ margin-left: 10px;
+ margin-bottom: -17px;
+
+}
+.estrela img{
+  margin-bottom: 15px;
+}
+
+
+#mainn{
+ margin-left: 30px;
+ margin-right: 30px;
+}
+
+img{
+  height: 270px;
+  border-radius: 10px;
+}
+
+.booksearch img {
+margin-top: 20px;
+}
+
+.booksearch p{
+  margin:10px;
+  text-justify: auto;
+  margin-left: 5px;
+  margin-bottom: 0px;
+ text-align: center;
+ 
+
+}
+
+h5{
+  font-family: "Quicksand";
+  margin: 0;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(90deg, rgba(78, 170, 236, 0.883), black);
+
+}
+
+
+.dark-mode header{
+  color: white;
+}
+
+.dark-mode a{
+  color: white;
+}
+.dark-mode a:hover{
+  color: black;
+ }
+ 
