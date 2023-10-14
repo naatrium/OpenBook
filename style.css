@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   transition: 0.3s;
 }
-}
+
 
 
 body::-webkit-scrollbar {
@@ -89,7 +89,6 @@ button img {
   height: 25px;
 }
 
-}
 .txtcapa{
   display: flex;
   justify-content: flex-start;
