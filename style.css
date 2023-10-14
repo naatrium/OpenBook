@@ -89,11 +89,6 @@ button img {
   height: 25px;
 }
 
-.doislivros{
-  display: flex;
-  justify-content: stretch;
-  float: left;
-
 }
 .txtcapa{
   display: flex;
@@ -109,6 +104,7 @@ main{
 }
 aside{
   margin-left: 0;
+  margin-top: 13px;
 }
 li{
   display: block;
