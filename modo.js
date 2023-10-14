@@ -3,7 +3,7 @@ function darkMode() {
     element.classList.toggle("dark-mode");
   }
 
-  var imgAtual = "componentes/imagens/modoclaro.png";
+  var imgAtual = "componentes/imagens/solbranco.png";
   var imgAnterior = "componentes/imagens/modoescuro.png";
   function mudarimg (){
     
@@ -43,4 +43,6 @@ function darkMode() {
 }
 
    
+  
+
   
