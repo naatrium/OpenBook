@@ -1,11 +1,10 @@
+/* Estilos gerais */
 *{
   font-family: "Montserrat";
   font-weight: bold;
 }
 
-
 body {
-   color: black;
   margin: 0 auto;
   padding-bottom: 15px;
   padding-left: 0;
@@ -14,8 +13,7 @@ body {
   transition: 0.3s;
 }
 
-
-
+/* Estilos do scrollbar (barra de rolagem) */
 body::-webkit-scrollbar {
   width: 12px;           
 }
@@ -27,39 +25,46 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid black;  
 }
 
+/* Estilos do cabeçalho */
 header {
   display: flex;
   justify-content: center;
- 
+}
+
+#iconbook {
+ margin-right: 20px;
+ margin-bottom: 0;
+ margin-top: 15px;
 }
 
 #title{
   margin: 0;
 }
-#iconbook {
- margin-right: 20px;
-  margin-bottom: 0;
-  margin-top: 15px;
-}
-h1, h3{
-  margin: 0;
-}
+
 h1{
+  margin: 0px;
   margin-top: 30px;
 }
 
-h3{
+h5{
+  font-family: "Quicksand";
+  margin: 0;
   text-align: center;
-  margin-top:10px;
+  margin-top: 5px;
+  font-size: 15px;
 }
 
+/* Estilos barras de busca e botão modo claro/escuro */
+.afterh{
+display: flex;
+justify-content: space-between;
+}
 #busca{
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-left: 20px;
   margin-right: 20px;
- 
 }
 
 input[type=text]{
@@ -68,39 +73,28 @@ input[type=text]{
   height: 35px;
 }
 
-.afterh{
-display: flex;
-justify-content: space-between;
-}
-
 button{
   background-color: transparent;
-  border-radius: 50%;
   height: 40px;
   width: 50px;
   margin-right: 10px;
   border: transparent;
-}
-button:hover {
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: black;
 }
 
 button img {
   height: 25px;
 }
 
-.txtcapa{
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-  margin-top: -5px;
-}
 
 
+/* Estilos principais */
 main{
   display: flex;
   margin-top: 25px; 
 }
+
+/* Estilos principais: menu de gêneros literários */
 aside{
   margin-left: 0;
   margin-top: 7px;
@@ -123,26 +117,8 @@ a:hover{
  color: white;
  font-weight: bold;
 }
-h2{
-  margin-bottom: 0px;
-}
 
-.estrela p{
-  font-size: 20px;
-}
-
-.estrela{
-  display: flex;
-  align-items: center;
- margin-left: 10px;
- margin-bottom: -17px;
-
-}
-.estrela img{
-  margin-bottom: 15px;
-}
-
-
+/* Estilos principais: capa/sinopse/avaliação */
 #mainn{
  margin-left: 30px;
  margin-right: 30px;
@@ -153,45 +129,118 @@ img{
   border-radius: 10px;
 }
 
-.booksearch img {
-margin-top: 20px;
+.txtcapa{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-top: -5px;
 }
 
+h2{
+  margin-bottom: 0px;
+}
+
+.estrela{
+ display: flex;
+ align-items: center;
+ margin-left: 10px;
+ margin-bottom: -17px;
+
+}
+.estrela img{
+  margin-bottom: 15px;
+}
+.estrela p{
+  font-size: 20px;
+}
+
+.booksearch img {
+  margin-top: 20px;
+  }
+  
 .booksearch p{
   margin:10px;
   text-justify: auto;
   margin-left: 5px;
   margin-bottom: 0px;
- text-align: center;
- 
-
-}
-
-h5{
-  font-family: "Quicksand";
-  margin: 0;
   text-align: center;
-  margin-top: 5px;
-  font-size: 15px;
+  }
+
+textarea{
+  border-radius: 10px;
+  width: 90%;
+  }
+
+  /* Estilos rodapé */
+footer {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre {
+  text-align: start;
+  margin-right: 10%; /* Espaçamento à direita da seção SOBRE */
+}
+
+footer p, h3 {
+  margin-left: 25%;
+}
+
+footer img {
+  height: 115px;
+  margin-right: 20%;
+}
+
+.fcreditos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
+/* Estilos modo escuro */
 .dark-mode {
+  color: white;
   background-color: black;
-  color: white;
   background-image: linear-gradient(90deg, rgba(78, 170, 236, 0.883), black);
-
 }
-
-
-.dark-mode header{
-  color: white;
-}
-
-.dark-mode a{
-  color: white;
+.dark-mode a {
+ color: white;
 }
 .dark-mode a:hover{
   color: black;
  }
+.dark-mode button{
+  color: white;
+}
+.dark-mode textarea{
+color: black;
+}
+
+
+ /* Estilos para adaptação do rodapé em celulares/dispositivos menores */
+ @media (max-width:999px){
  
+  footer {
+    margin-top: 30%;
+    flex-direction: column; /* Altera a direção para empilhar os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: center;
+  }
+
+  .sobre {
+    margin-right: 10%; /* Remove a margem à direita da seção SOBRE */
+
+  }
+
+  /* Centraliza a imagem com o texto */
+  .sobre, footer img {
+    display: block; /* Remove a exibição flex e define como bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+}
+
+
+
