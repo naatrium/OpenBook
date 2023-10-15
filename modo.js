@@ -62,36 +62,36 @@ toggleButtons.forEach((toggleButton, index) => {
 
 
 
+var botoesSalvar = document.querySelectorAll(".botaoSalvar");
 
-document.getElementById("botaoSalvar").addEventListener("click", function() {
-  // Pega o texto da área de texto
-  var resenha = document.getElementById("resenha").value;
+for (var i = 0; i < botoesSalvar.length; i++) {
+    botoesSalvar[i].addEventListener("click", function() {
+        var resenhaInput = this.parentElement.querySelector(".resenha");
+        var resenha = resenhaInput.value;
 
-  if (resenha.trim() === "") {
-      alert("Por favor, escreva uma resenha antes de salvar.");
-      return;
-  }
+        if (resenha.trim() === "") {
+            alert("Por favor, escreva uma resenha antes de salvar.");
+            return;
+        }
 
-  // Cria um elemento de parágrafo para exibir a resenha
-  var paragrafo = document.createElement("p");
-  paragrafo.textContent = resenha;
+        var paragrafo = document.createElement("p");
+        paragrafo.textContent = resenha;
 
-// Cria um botão com o símbolo "X" para excluir a resenha
-var botaoExcluir = document.createElement("button");
-botaoExcluir.innerHTML = "&#10006;"; // Código HTML para o símbolo "X"
-botaoExcluir.classList.add("botaoExcluir");
-botaoExcluir.addEventListener("click", function() {
-    divResenha.remove();
-});
-  // Cria um div para conter a resenha e o botão
-  var divResenha = document.createElement("div");
-  divResenha.classList.add("resenha");
-  divResenha.appendChild(paragrafo);
-  divResenha.appendChild(botaoExcluir);
+        var botaoExcluir = document.createElement("button");
+        botaoExcluir.innerHTML = "&#10006;";
+        botaoExcluir.classList.add("botaoExcluir");
+        botaoExcluir.addEventListener("click", function() {
+            paragrafo.remove();
+            botaoExcluir.remove();
+        });
 
-  // Adiciona o div com a resenha e o botão à lista de resenhas salvas
-  document.getElementById("resenhasSalvas").appendChild(divResenha);
+        var divResenha = document.createElement("div");
+        divResenha.classList.add("resenha");
+        divResenha.appendChild(paragrafo);
+        divResenha.appendChild(botaoExcluir);
 
-  // Limpa a área de texto
-  document.getElementById("resenha").value = "";
-});
+        this.parentElement.querySelector(".resenhasSalvas").appendChild(divResenha);
+
+        resenhaInput.value = ""; // Limpa a área de texto
+    });
+}
